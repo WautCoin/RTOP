@@ -113,5 +113,6 @@ class OAuth2ClientCredentials(TokenProvider):
     def get_token(self) -> str:
         if self._access_token is None or self._is_expired():
             self._fetch_token()
-        assert self._access_token is not None  # noqa: S101
+        if self._access_token is None:
+            raise RuntimeError("OAuth2 token fetch succeeded but access_token was not set")
         return self._access_token
