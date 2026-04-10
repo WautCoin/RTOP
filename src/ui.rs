@@ -69,7 +69,7 @@ fn draw_cpu_section(f: &mut Frame, app: &App, area: Rect) {
     for (i, &usage) in app.cpu.core_usages.iter().take(num_cores).enumerate() {
         let label = format!("#{:<2} {:>5.1}%", i, usage);
         let gauge = Gauge::default()
-            .label(label.clone())
+            .label(label)
             .ratio((usage as f64 / 100.0).clamp(0.0, 1.0))
             .gauge_style(Style::default().fg(Color::LightGreen).bg(Color::DarkGray));
         f.render_widget(gauge, rows[i + 1]);
