@@ -111,7 +111,7 @@ codeunit 70001 "Palantir API Integration"
         exit(TransactionRID);
     end;
 
-    procedure UploadParquetFile(DatasetRID: Text; TransactionRID: Text; LogicalPath: Text; JsonLines: Text)
+    procedure UploadJsonLinesFile(DatasetRID: Text; TransactionRID: Text; LogicalPath: Text; JsonLines: Text)
     var
         HttpClient: HttpClient;
         HttpRequest: HttpRequestMessage;
@@ -249,7 +249,7 @@ codeunit 70001 "Palantir API Integration"
     begin
         Value := Value.Replace('\', '\\');
         Value := Value.Replace('"', '\"');
-        Value := Value.Replace('/', '\/');
+
         Value := Value.Replace(#10, '\n');
         Value := Value.Replace(#13, '\r');
         Value := Value.Replace(#09, '\t');

@@ -109,7 +109,7 @@ codeunit 70000 "Palantir Management"
 
         CollectDataAsJsonLines(PalantirDataset, JsonLines, RecordCount);
 
-        PalantirAPI.UploadParquetFile(
+        PalantirAPI.UploadJsonLinesFile(
             PalantirDataset."Dataset RID",
             TransactionRID,
             'data.jsonl',

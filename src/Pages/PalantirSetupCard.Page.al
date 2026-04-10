@@ -142,6 +142,6 @@ page 70000 "Palantir Setup Card"
     begin
         PalantirSetup.GetOrCreate();
         if not Rec.Get('') then
-            Rec.Get('');
+            Error('');
     end;
 }
