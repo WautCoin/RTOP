@@ -1,0 +1,2 @@
+[console_scripts]
+palantir-foundry = palantir_foundry.cli:main

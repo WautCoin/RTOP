@@ -1,3 +1,32 @@
+Metadata-Version: 2.4
+Name: palantir-foundry
+Version: 0.1.0
+Summary: Python client library for the Palantir Foundry REST API
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/palantir/foundry-platform-python
+Project-URL: Documentation, https://www.palantir.com/docs/foundry/api/
+Project-URL: Source, https://github.com/palantir/foundry-platform-python
+Keywords: palantir,foundry,sdk,data,ontology
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.31.0
+Requires-Dist: urllib3>=2.0.0
+Requires-Dist: click>=8.1.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4; extra == "dev"
+Requires-Dist: pytest-mock>=3.12; extra == "dev"
+Dynamic: license-file
+
 # Palantir Foundry Python SDK
 
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org)

@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "palantir-foundry"
+version = "0.1.0"
+description = "Python client library for the Palantir Foundry REST API"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.9"
+keywords = ["palantir", "foundry", "sdk", "data", "ontology"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "requests>=2.31.0",
+    "urllib3>=2.0.0",
+    "click>=8.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-mock>=3.12",
+]
+
+[project.scripts]
+palantir-foundry = "palantir_foundry.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/palantir/foundry-platform-python"
+"Documentation" = "https://www.palantir.com/docs/foundry/api/"
+"Source" = "https://github.com/palantir/foundry-platform-python"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["palantir_foundry*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
