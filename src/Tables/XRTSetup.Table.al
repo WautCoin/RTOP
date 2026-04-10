@@ -85,7 +85,7 @@ table 50100 "XRT Setup"
     begin
         XRTAuthHelper.SetPassword(Password);
         "Has Password" := true;
-        if Modify() then;
+        Modify();
     end;
 
     procedure DeletePassword()
@@ -94,6 +94,6 @@ table 50100 "XRT Setup"
     begin
         XRTAuthHelper.DeletePassword();
         "Has Password" := false;
-        if Modify() then;
+        Modify();
     end;
 }

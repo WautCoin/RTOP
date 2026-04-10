@@ -32,15 +32,13 @@ codeunit 50102 "XRT Auth Helper"
         Base64Convert: Codeunit "Base64 Convert";
         Password: SecretText;
         Credentials: SecretText;
-        CredPrefix: Text;
     begin
         if XRTSetup."User Name" = '' then
             exit;
         if not GetPassword(Password) then
             exit;
 
-        CredPrefix := XRTSetup."User Name" + ':';
-        Credentials := SecretStrSubstNo('%1%2', CredPrefix, Password);
+        Credentials := SecretStrSubstNo('%1:%2', XRTSetup."User Name", Password);
         HttpClient.DefaultRequestHeaders().Add('Authorization', SecretStrSubstNo('Basic %1', Base64Convert.ToBase64(Credentials)));
     end;
 }

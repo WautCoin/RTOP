@@ -29,6 +29,7 @@ A Microsoft Dynamics 365 Business Central AL extension that integrates Business 
 | Page        | 50102 | XRT Bank Statements   |
 | Codeunit    | 50100 | XRT Management        |
 | Codeunit    | 50101 | XRT File Export       |
+| Codeunit    | 50102 | XRT Auth Helper       |
 | Enum        | 50100 | XRT Payment File Format |
 | Enum        | 50101 | XRT Payment File Status |
 | Enum        | 50102 | XRT Bank Stmt. Format |
