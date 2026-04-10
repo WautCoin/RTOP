@@ -1,0 +1,25 @@
+{
+  "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "name": "Palantir Foundry Integration",
+  "publisher": "WautCoin",
+  "version": "1.0.0.0",
+  "brief": "Integrates Microsoft Dynamics 365 Business Central with Palantir Foundry for data analytics and AI-driven insights.",
+  "description": "This extension connects Business Central to Palantir Foundry, enabling automated export of business data to Foundry datasets, tracking of dataset sync status, and consumption of Palantir-powered analytical outputs back into BC.",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "24.0.0.0",
+  "application": "24.0.0.0",
+  "idRanges": [
+    {
+      "from": 70000,
+      "to": 70099
+    }
+  ],
+  "features": ["TranslationFile"],
+  "runtime": "12.0"
+}
